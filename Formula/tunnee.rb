@@ -5,21 +5,21 @@
 class Tunnee < Formula
   desc "Expose your local services to the internet."
   homepage "https://tunnee.com"
-  version "0.4.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://downloads.tunnee.com/cli/0.4.0/tunnee_0.4.0_darwin_x86_64.tar.gz"
-      sha256 "41bcc324dc3ba723373f8153502f9da04a057ff018dd994cbd01d38e6366bea5"
+      url "https://downloads.tunnee.com/cli/1.0.0/tunnee_1.0.0_darwin_x86_64.tar.gz"
+      sha256 "0d11ebf74457d193e25e2da94a31978df800667e4e9188926c855ca3d635759e"
 
       define_method(:install) do
         bin.install "tunnee"
       end
     end
     if Hardware::CPU.arm?
-      url "https://downloads.tunnee.com/cli/0.4.0/tunnee_0.4.0_darwin_arm64.tar.gz"
-      sha256 "d860628b1c1fe75215b2d373bbbdd822bc8d82c6ab551453bbd0c2bb138cf53b"
+      url "https://downloads.tunnee.com/cli/1.0.0/tunnee_1.0.0_darwin_arm64.tar.gz"
+      sha256 "3c0797d925e967ad288858319085914b0ff08eb34b2442d4fb054f6e842a6257"
 
       define_method(:install) do
         bin.install "tunnee"
@@ -29,15 +29,15 @@ class Tunnee < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://downloads.tunnee.com/cli/0.4.0/tunnee_0.4.0_linux_x86_64.tar.gz"
-      sha256 "d7a1977fca05e6d7129abef507c303611d1eba5429c81f247bd0535439606baa"
+      url "https://downloads.tunnee.com/cli/1.0.0/tunnee_1.0.0_linux_x86_64.tar.gz"
+      sha256 "8afd14acc69013e055fbc413060e871bc685ddf8c409b45354820cc84f3ec1a5"
       define_method(:install) do
         bin.install "tunnee"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.tunnee.com/cli/0.4.0/tunnee_0.4.0_linux_arm64.tar.gz"
-      sha256 "2536fe59664b47d92994e4efbd4440bbbca29f32145dfc182996dcd1563de89f"
+      url "https://downloads.tunnee.com/cli/1.0.0/tunnee_1.0.0_linux_arm64.tar.gz"
+      sha256 "43e2fea3bb30ea2aa4e51f2185227ffe2bd31db907ca6b0dad232f2185896fa8"
       define_method(:install) do
         bin.install "tunnee"
       end
